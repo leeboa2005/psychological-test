@@ -7,7 +7,7 @@ begin
 const endPoint = 12;
 const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-function addAnswer(answerText, qIdx) {
+function addAnswer(answerText, qIdx) { // 답변 리스트 넘어가게 작동하기
   const a = document.querySelector('.answerBox');
   let answer = document.createElement('button');
   answer.classList.add('answerList');
@@ -42,7 +42,7 @@ function begin() { // 화면 전환 함수
       main.style.display = "none";
       qna.style.display = "block";
     }, 450);
-    let qIdx = 0; // 질문이 12번 출력되야하기 때문에 피라미터값으로 선언한다.
+    let qIdx = 0; // 질문이 12번 출력되야하기 때문에 파라미터값으로 선언한다.
     goNext(qIdx);
   }, 450);
 }
